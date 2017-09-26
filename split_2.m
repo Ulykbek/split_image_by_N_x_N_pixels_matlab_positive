@@ -21,8 +21,6 @@ for i=1:NumberOfMinutia
     imwrite(F,[num2str(i) '_rotated_2.png']);
     G=imrotate(F,90);
     imwrite(G,[num2str(i) '_rotated_3.png']);
-    H=imrotate(D,45);
-    imwrite(H,[num2str(i) '_rotated_45.png']);
 end
 
 
