@@ -13,8 +13,16 @@ for i=1:NumberOfMinutia
     %disp(C((i*3)-2:(i*3)-1));
     x = C((i*3)-2)
     y = C((i*3)-1)
-    D=I(x:x+15,y:y+15);
+    D=I(y-7:y+8,x-7:x+8);
     imwrite(D,[num2str(i) '.png']);
+    E=imrotate(D,90);
+    imwrite(E,[num2str(i) '_rotated_1.png']);
+    F=imrotate(E,90);
+    imwrite(F,[num2str(i) '_rotated_2.png']);
+    G=imrotate(F,90);
+    imwrite(G,[num2str(i) '_rotated_3.png']);
+    H=imrotate(D,45);
+    imwrite(H,[num2str(i) '_rotated_45.png']);
 end
 
 
